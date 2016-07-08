@@ -1,0 +1,47 @@
+body {
+  background: lightblue;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: block; }
+
+.container {
+  postion: absolute;
+  max-width: 1000px;
+  margin: 100px auto; }
+
+.django {
+  height: 75%;
+  width: 75%; }
+
+.fam {
+  height: 100%;
+  width: 100%; }
+
+.fellowship {
+  height: 50%;
+  width: 50%;
+}
+
+
+p {
+  font-size: 20px;
+  text-align: justify; }
+
+h4 {
+  font-size: 28px; }
+
+h2 {
+  postion: absolute;
+  text-align: center; }
+
+@media (max-width: 640px) {
+  body {
+    display: block; }
+  .container {
+    max-width: 300px;
+    margin: 0 100px;
+    text-align: center; }
+  .matrix {
+    height: 100%;
+    width: 100%; } }
