@@ -922,7 +922,7 @@ section.design {
 @media (max-width: 640px) {
   section.design .works {
     margin: 0;
-    width: 575px; }
+    width: 345px; }
   section.design .work {
     display: inline-block;
     margin-right: 35px; }
