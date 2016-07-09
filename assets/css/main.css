@@ -921,7 +921,7 @@ section.design {
 
 @media (max-width: 640px) {
   section.design .works {
-    margin: 0;
+    margin: 0 15px;
     width: 345px; }
   section.design .work {
     display: inline-block;
