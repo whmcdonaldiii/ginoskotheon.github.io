@@ -5,6 +5,10 @@ body {
   display: -ms-flexbox;
   display: block; }
 
+
+body .MIT {
+  background: pink;
+}
 .container {
   postion: absolute;
   max-width: 1000px;
@@ -49,4 +53,10 @@ h2 {
   .fellowship {
     height: 100%;
     width: 100%;
+
+  }
+  .mit {
+    height: 100%;
+    width: 100%;
+
   }
