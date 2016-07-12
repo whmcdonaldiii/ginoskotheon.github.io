@@ -41,7 +41,10 @@ h2 {
 
 @media (max-width: 640px) {
   body {
-    display: block; }
+    display: block;
+    margin-bottom: 250px;
+    clear: both;
+  }
   .container {
     max-width: 300px;
     margin: 0 30px;
