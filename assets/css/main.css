@@ -803,16 +803,19 @@ section.about {
     margin-bottom: 30px; }
     @media (max-width: 640px) {
       section.about h2 {
-        margin-left: auto;
+        font-size: 30px;
+        margin-left: 200px;
         margin-right: auto;
-        max-width: 300px; } }
-  section.about .lead {
-    padding-bottom: 180px; }
+        max-width: 100px; } }
+  section.about .home-lead {
+    padding-bottom: 280px; }
     @media (max-width: 640px) {
-      section.about .lead {
-        margin-left: auto;
+      section.about .home-lead {
+        padding-bottom: 0;
+        font-size: 20px;
+        margin-left: 200px;
         margin-right: auto;
-        max-width: 300px; } }
+        max-width: 100px; } }
 
 section.youtube {
   background-image: url(../img/youtube-bg.jpg);
