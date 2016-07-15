@@ -555,7 +555,9 @@ nav.swg-nav-wrap {
   left: 18px;
   font-size: 35px;
   color: #333 !important;
-  padding: 0; }
+  padding: 0;
+  z-index: 1;
+}
 
 .title-string {
   position: absolute;
