@@ -548,7 +548,7 @@ nav.swg-nav-wrap {
   background-repeat: no-repeat;
   background-size: contain;
   line-height: 36px;
-  margin-top: 5px;
+  margin-top: 0px;
   height: 35px;
   width: 36px;
   position: absolute;
@@ -557,6 +557,13 @@ nav.swg-nav-wrap {
   color: #333 !important;
   padding: 0;
   z-index: 1;
+}
+
+.title-word {
+  font-size: 12px;
+  color: #777 !important;
+  margin-top: 32px;
+  margin-left: 2px;
 }
 
 .title-string {
