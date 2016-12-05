@@ -467,7 +467,7 @@ body {
 /* Basic Styles
   ------------------------------------	*/
 body {
-  background: orangered;
+  /*background: orangered;*/
   font-size: 14px;
   line-height: 1.6;
   font-family: 'Fira Sans', sans-serif;
@@ -515,7 +515,7 @@ section:nth-child(odd) {
             box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.4); }
 
 header.jh {
-  background-image: url(../img/hireme.jpg);
+  background-image: url(../img/hire_me.jpg);
   height: 100vh;
   background-size: cover;
   display: -webkit-box;
