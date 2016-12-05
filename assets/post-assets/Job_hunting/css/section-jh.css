@@ -467,7 +467,7 @@ body {
 /* Basic Styles
   ------------------------------------	*/
 body {
-  background: lightgray;
+  background: orangered;
   font-size: 14px;
   line-height: 1.6;
   font-family: 'Fira Sans', sans-serif;
@@ -514,8 +514,8 @@ section:nth-child(odd) {
     -webkit-box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.4);
             box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.4); }
 
-header.san {
-  background-image: url(../img/san_antonio.jpg);
+header.jh {
+  background-image: url(../img/hire_me.jpg);
   height: 100vh;
   background-size: cover;
   display: -webkit-box;
@@ -535,31 +535,31 @@ header.san {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-  header.san h1, header.san h4 {
+  header.jh h1, header.jh h4 {
     color: white; }
-  header.san div {
+  header.jh div {
     color: white;
     text-align: justify;
     font-family: fira sans;
     -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.7);
             box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.7); }
-  header.san .box {
+  header.jh .box {
     padding: 5px 5px;
     height: 500px;
     width: 400px;
     border: 1px solid white; }
   @media (max-width: 640px) {
-    header.san div {
+    header.jh div {
       max-width: 300px;
       margin-bottom: 100px;
       height: 200px; }
-    header.san .box {
+    header.jh .box {
       height: 190px;
       width: auto; }
-    header.san h1 {
+    header.jh h1 {
       margin-top: 0px;
       text-align: center; }
-    header.san h4 {
+    header.jh h4 {
       margin-top: 0;
       text-align: center; } }
 
