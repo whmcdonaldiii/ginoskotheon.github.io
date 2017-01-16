@@ -548,7 +548,7 @@ nav.swg-nav-wrap {
   background-repeat: no-repeat;
   background-size: contain;
   line-height: 36px;
-  margin-top: 0px;
+  margin-top: 5px;
   height: 35px;
   width: 36px;
   position: absolute;
@@ -556,15 +556,7 @@ nav.swg-nav-wrap {
   font-size: 35px;
   color: #333 !important;
   padding: 0;
-  z-index: 1;
-}
-
-.title-word {
-  font-size: 12px;
-  color: #777 !important;
-  margin-top: 32px;
-  margin-left: 2px;
-}
+  z-index: 1; }
 
 .title-string {
   position: absolute;
@@ -701,7 +693,6 @@ nav.swg-nav-wrap {
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
-                -ms-grid-row-align: center;
             align-items: center;
     cursor: pointer; }
     .home-wrap header .mobile-nav-toggle:selection {
@@ -780,7 +771,6 @@ nav.swg-nav-wrap {
       -webkit-box-align: center;
       -webkit-align-items: center;
           -ms-flex-align: center;
-                  -ms-grid-row-align: center;
               align-items: center; }
     .home-wrap header .site-nav,
     .home-wrap header .email-link {
@@ -799,9 +789,10 @@ nav.swg-nav-wrap {
             transform: translateY(0%); } }
 
 section.about {
-  background-image: url(../img/me-red-bg.jpg);
-  background-position: center top;
-  background-size: cover; }
+  background-image: url(../img/meprofile.jpg);
+  background-position: top left;
+  background-size: 720px 960px;
+  background-repeat: no-repeat; }
   section.about h2 {
     color: #3f3f42;
     font-size: 60px;
@@ -812,19 +803,16 @@ section.about {
     margin-bottom: 30px; }
     @media (max-width: 640px) {
       section.about h2 {
-        font-size: 30px;
-        margin-left: 200px;
+        margin-left: auto;
         margin-right: auto;
-        max-width: 100px; } }
-  section.about .home-lead {
-    padding-bottom: 280px; }
+        max-width: 300px; } }
+  section.about .lead {
+    padding-bottom: 180px; }
     @media (max-width: 640px) {
-      section.about .home-lead {
-        padding-bottom: 0;
-        font-size: 20px;
-        margin-left: 200px;
+      section.about .lead {
+        margin-left: auto;
         margin-right: auto;
-        max-width: 100px; } }
+        max-width: 300px; } }
 
 section.youtube {
   background-image: url(../img/youtube-bg.jpg);
