@@ -789,10 +789,10 @@ nav.swg-nav-wrap {
             transform: translateY(0%); } }
 
 section.about {
-  background-image: url(../img/meprofile.jpg);
-  background-position: top left;
-  background-size: 720px 960px;
-  background-repeat: no-repeat; }
+  background-image: url(../img/mecutout.png), url(../img/qingdao.jpg);
+  background-size: 720px 960px, cover;
+  background-position: top left, 0;
+  background-repeat: no-repeat, no-repeat; }
   section.about h2 {
     color: #3f3f42;
     font-size: 60px;
@@ -806,6 +806,8 @@ section.about {
         margin-left: auto;
         margin-right: auto;
         max-width: 300px; } }
+  section.about .home-lead {
+    color: #fff; }
   section.about .lead {
     padding-bottom: 180px; }
     @media (max-width: 640px) {
@@ -823,8 +825,8 @@ section.youtube {
   section.youtube .home-cta {
     color: #e20a0a; }
   section.youtube .flex-video {
-    -webkit-box-shadow: 0px 4px 40px 3px rgba(0, 0, 0, 0.5);
-            box-shadow: 0px 4px 40px 3px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.5);
     -webkit-transform: scale(1.4);
         -ms-transform: scale(1.4);
             transform: scale(1.4); }
