@@ -825,6 +825,7 @@ section.about {
         max-width: 300px; } }
 
 section.react {
+  
   background-image: url(../img/react-bg.jpg);
   background-color: steelblue;
   background-position: center;
