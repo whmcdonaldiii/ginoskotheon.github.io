@@ -1,10 +1,16 @@
 .home-footer
 
+  background: #e24040
 
-  a
+  &:hover
+    background: darken(#e24040, 8%)
+    
+  .flex
+    flex-direction: column
+    align-items: center
+
+  .email a
     color: white
-    background: #e24040
-    display: block
     line-height: 6
     text-align: center
     font-size: 60px
@@ -19,6 +25,22 @@
     @media (max-width: 640px)
         font-size: 20px
 
+  .inline
+    display: flex
+    justify-content: space-between
 
-    &:hover
-      background: darken(#e24040, 8%)
+  .inline a
+    color: white
+    line-height: 6
+    text-align: center
+    font-size: 30px
+    transition: background 150ms ease-in-out
+
+    @media (max-width: 895px)
+        font-size: 50px
+    @media (max-width: 650px)
+
+        font-size: 35px
+
+    @media (max-width: 640px)
+        font-size: 20px
