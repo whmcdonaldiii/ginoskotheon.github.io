@@ -1206,7 +1206,7 @@ section.articles {
 .home-footer {
   background: #e24040; }
   .home-footer:hover {
-    background: #d82121; }
+    background: green; }
   .home-footer .flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
