@@ -1203,9 +1203,11 @@ section.articles {
     -webkit-transform: scale3d(1, 1, 1);
             transform: scale3d(1, 1, 1); } }
 
-section.home-footer {
+.home-footer {
   background: #e24040; }
-  section.home-footer .flex {
+  .home-footer:hover {
+    background: #d82121; }
+  .home-footer .flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -1215,7 +1217,7 @@ section.home-footer {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
-  section.home-footer .email a {
+  .home-footer .email a {
     color: white;
     line-height: 6;
     text-align: center;
@@ -1223,15 +1225,15 @@ section.home-footer {
     -webkit-transition: background 150ms ease-in-out;
     transition: background 150ms ease-in-out; }
     @media (max-width: 895px) {
-      section.home-footer .email a {
+      .home-footer .email a {
         font-size: 50px; } }
     @media (max-width: 650px) {
-      section.home-footer .email a {
+      .home-footer .email a {
         font-size: 35px; } }
     @media (max-width: 640px) {
-      section.home-footer .email a {
+      .home-footer .email a {
         font-size: 20px; } }
-  section.home-footer .inline {
+  .home-footer .inline {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1240,7 +1242,7 @@ section.home-footer {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between; }
-  section.home-footer .inline a {
+  .home-footer .inline a {
     color: white;
     line-height: 6;
     text-align: center;
@@ -1248,13 +1250,13 @@ section.home-footer {
     -webkit-transition: background 150ms ease-in-out;
     transition: background 150ms ease-in-out; }
     @media (max-width: 895px) {
-      section.home-footer .inline a {
+      .home-footer .inline a {
         font-size: 50px; } }
     @media (max-width: 650px) {
-      section.home-footer .inline a {
+      .home-footer .inline a {
         font-size: 35px; } }
     @media (max-width: 640px) {
-      section.home-footer .inline a {
+      .home-footer .inline a {
         font-size: 20px; } }
 
 .home-wrap {
