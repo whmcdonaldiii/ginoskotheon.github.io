@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
 
-
-
-
 export default class Header extends React.Component {
   render() {
     return (
@@ -15,11 +12,8 @@ export default class Header extends React.Component {
         <div className="col-md-12">
           <button className="btn btn-default btn-sm"  onClick={this.handleNewBoard.bind(this, 0)}>Clear Board</button>
           <button className="btn btn-default btn-sm"  onClick={this.handleNewBoard.bind(this, 1)}>New Random Game</button>
-
         </div>
-        <div className="col-md-12" >
-
-        </div>
+        <div className="col-md-12" ></div>
         <div id='generations'> {this.props.gen} Generations</div>
       </div>
     );

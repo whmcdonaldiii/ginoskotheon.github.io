@@ -21857,7 +21857,7 @@
 	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
 	    _this.state = {
-	      gameBoard: [],
+	      Board: [],
 	      gen: 0,
 	      running: false,
 	      speed: 120,
@@ -21870,7 +21870,7 @@
 	  _createClass(App, [{
 	    key: 'componentWillMount',
 	    value: function componentWillMount() {
-	      this.createNewGame(1);
+	      this.newGame(1);
 	      this.setState({
 	        running: true
 	      });
@@ -21892,21 +21892,21 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'gameBoard' },
+	        { className: 'Board' },
 	        _react2.default.createElement(
 	          'div',
 	          { id: 'header' },
-	          _react2.default.createElement(_header2.default, { gen: this.state.gen, next: this.nextGeneration.bind(this), newBoard: this.createNewGame.bind(this), run: this.toggleRun.bind(this), pause: this.togglePause.bind(this), runState: this.state.running, pauseState: this.state.pause })
+	          _react2.default.createElement(_header2.default, { gen: this.state.gen, next: this.nextGeneration.bind(this), newBoard: this.newGame.bind(this), run: this.toggleRunPause.bind(this), pause: this.togglePause.bind(this), runState: this.state.running, pauseState: this.state.pause })
 	        ),
-	        _react2.default.createElement(_gameboard2.default, { gameboard: this.state.gameBoard, that: this }),
+	        _react2.default.createElement(_gameboard2.default, { gameboard: this.state.Board, that: this }),
 	        _react2.default.createElement(
 	          'div',
 	          { id: 'footer' },
-	          _react2.default.createElement(_footer2.default, { speed: this.changeSpeed.bind(this), newBoard: this.createNewGame.bind(this) })
+	          _react2.default.createElement(_footer2.default, { speed: this.speedControl.bind(this), newBoard: this.newGame.bind(this) })
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { id: 'message' },
+	          { id: 'msg' },
 	          _react2.default.createElement(
 	            'p',
 	            null,
@@ -21916,14 +21916,14 @@
 	      );
 	    }
 	  }, {
-	    key: 'changeSpeed',
-	    value: function changeSpeed(newSpeed) {
+	    key: 'speedControl',
+	    value: function speedControl(newSpeed) {
 	      if (this.state.running) {
 	        this.setState({
 	          speed: newSpeed,
 	          pause: true
 	        });
-	        setTimeout(this.toggleRun.bind(this), 15);
+	        setTimeout(this.toggleRunPause.bind(this), 15);
 	      } else {
 	        this.setState({
 	          speed: newSpeed
@@ -21931,8 +21931,8 @@
 	      }
 	    }
 	  }, {
-	    key: 'toggleRun',
-	    value: function toggleRun() {
+	    key: 'toggleRunPause',
+	    value: function toggleRunPause() {
 	      this.setState({
 	        pause: false,
 	        running: true
@@ -21973,7 +21973,7 @@
 	  }, {
 	    key: 'nextGeneration',
 	    value: function nextGeneration() {
-	      var arr = this.state.gameBoard;
+	      var arr = this.state.Board;
 	      arr.push(arr[0]);
 	      arr.unshift(arr[arr.length - 2]);
 	      var nextArr = [];
@@ -22008,19 +22008,19 @@
 	        _loop(i);
 	      }
 	      this.setState({
-	        gameBoard: nextArr,
+	        Board: nextArr,
 	        gen: this.state.gen + 1
 	      });
 	    }
 	  }, {
 	    key: 'toggleLife',
 	    value: function toggleLife(status, loc) {
-	      var gameBoard = this.state.gameBoard;
+	      var Board = this.state.Board;
 	      status++;
 	      status === 3 ? status = 0 : status;
-	      gameBoard[loc[1]][loc[0]] = status;
+	      Board[loc[1]][loc[0]] = status;
 	      this.setState({
-	        gameBoard: gameBoard
+	        Board: Board
 	      });
 	    }
 	  }, {
@@ -22029,23 +22029,23 @@
 	      return Math.floor(Math.random() * (max - min + 1) + min);
 	    }
 	  }, {
-	    key: 'createNewGame',
-	    value: function createNewGame(max) {
+	    key: 'newGame',
+	    value: function newGame(max) {
 	      var size = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.state.size;
 
 	      if (this.state.running) {
 	        this.togglePause();
 	      }
 
-	      var gameBoard = [];
+	      var Board = [];
 	      for (var i = 0; i < size[1]; i++) {
-	        gameBoard.push([]);
+	        Board.push([]);
 	        for (var j = 0; j < size[0]; j++) {
-	          gameBoard[i].push(this.getRandom(0, max));
+	          Board[i].push(this.getRandom(0, max));
 	        }
 	      }
 	      this.setState({
-	        gameBoard: gameBoard,
+	        Board: Board,
 	        gen: 0,
 	        size: size
 	      });
@@ -22225,7 +22225,7 @@
 	        });
 	        return _react2.default.createElement(
 	          'div',
-	          { className: "boardRow row" + i, key: i },
+	          { className: "line row" + i, key: i },
 	          entry
 	        );
 	      });
@@ -22240,9 +22240,6 @@
 
 	  return GameBoard;
 	}(_react2.default.Component);
-
-	// export default GameBoard;
-
 
 	exports.default = GameBoard;
 
@@ -22280,8 +22277,8 @@
 	  }
 
 	  _createClass(Cell, [{
-	    key: "cellClick",
-	    value: function cellClick(e) {
+	    key: "clickCell",
+	    value: function clickCell(e) {
 	      e.preventDefault();
 	      this.props.toggle(this.props.info, this.props.loc);
 	    }
@@ -22291,7 +22288,7 @@
 	      var status = void 0;
 	      status = !this.props.info ? "dead" : this.props.info === 1 ? "young" : "alive";
 	      status += " cell";
-	      return _react2.default.createElement("div", { id: "cells", onClick: this.cellClick.bind(this), className: status, key: this.props.index });
+	      return _react2.default.createElement("div", { id: "cells", onClick: this.clickCell.bind(this), className: status, key: this.props.index });
 	    }
 	  }]);
 

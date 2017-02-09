@@ -6,8 +6,6 @@ import Cell from './cell';
 export default class GameBoard extends React.Component {
     constructor(props) {
     super(props);
-
-
   }
 
   render() {
@@ -20,7 +18,7 @@ export default class GameBoard extends React.Component {
         return (<Cell key={j} toggle={that.toggleLife.bind(that)} loc={[j, i]} info={element} index={j} />)
     });
     return (
-      <div className={"boardRow row"+i} key={i}>{entry}</div>
+      <div className={"line row"+i} key={i}>{entry}</div>
     );
   });
 
@@ -31,5 +29,3 @@ export default class GameBoard extends React.Component {
     );
   }
 }
-
-// export default GameBoard;

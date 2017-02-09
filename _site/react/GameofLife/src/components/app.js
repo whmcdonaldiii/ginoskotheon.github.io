@@ -8,7 +8,7 @@ export default class App extends Component {
   constructor(){
     super();
     this.state = {
-      gameBoard: [],
+      Board: [],
       gen: 0,
       running: false,
       speed: 120,
@@ -18,7 +18,7 @@ export default class App extends Component {
   }
 
   componentWillMount() {
-    this.createNewGame(1);
+    this.newGame(1);
     this.setState({
       running: true
     });
@@ -37,32 +37,32 @@ export default class App extends Component {
   render() {
     return (
 
-      <div className="gameBoard">
+      <div className="Board">
         <div id="header">
-          <Header gen={this.state.gen} next={this.nextGeneration.bind(this)} newBoard={this.createNewGame.bind(this)} run={this.toggleRun.bind(this)} pause={this.togglePause.bind(this)} runState={this.state.running} pauseState={this.state.pause} />
+          <Header gen={this.state.gen} next={this.nextGeneration.bind(this)} newBoard={this.newGame.bind(this)} run={this.toggleRunPause.bind(this)} pause={this.togglePause.bind(this)} runState={this.state.running} pauseState={this.state.pause} />
         </div>
 
-          <GameBoard gameboard={this.state.gameBoard} that={this}/>
-    
+          <GameBoard gameboard={this.state.Board} that={this}/>
+
 
         <div id="footer">
-          <Footer speed={this.changeSpeed.bind(this)} newBoard={this.createNewGame.bind(this)} />
+          <Footer speed={this.speedControl.bind(this)} newBoard={this.newGame.bind(this)} />
         </div>
 
-        <div id="message">
+        <div id="msg">
           <p>Add or remove cells by clicking on a cell. Lighter cells are new in the current generation, darker cells have survived for at least one generation</p>
         </div>
       </div>
     );
   }
 
-  changeSpeed(newSpeed) {
+  speedControl(newSpeed) {
     if (this.state.running) {
       this.setState({
         speed: newSpeed,
         pause: true
       });
-      setTimeout(this.toggleRun.bind(this), 15);
+      setTimeout(this.toggleRunPause.bind(this), 15);
     } else {
       this.setState({
         speed: newSpeed
@@ -70,7 +70,7 @@ export default class App extends Component {
     }
   }
 
-  toggleRun() {
+  toggleRunPause() {
     this.setState({
       pause: false,
       running: true
@@ -108,7 +108,7 @@ export default class App extends Component {
   }
 
   nextGeneration() {
-    let arr = this.state.gameBoard;
+    let arr = this.state.Board;
     arr.push(arr[0]);
     arr.unshift(arr[arr.length-2]);
     let nextArr = [];
@@ -139,37 +139,37 @@ export default class App extends Component {
       });
     }
     this.setState({
-      gameBoard: nextArr,
+      Board: nextArr,
       gen: this.state.gen + 1
     });
   }
 
   toggleLife(status, loc) {
-    let gameBoard = this.state.gameBoard;
+    let Board = this.state.Board;
     status++;
     status === 3 ? status = 0 : status;
-    gameBoard[loc[1]][loc[0]] = status;
+    Board[loc[1]][loc[0]] = status;
     this.setState({
-      gameBoard: gameBoard
+      Board: Board
     });
   }
   getRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
-  createNewGame(max, size = this.state.size) {
+  newGame(max, size = this.state.size) {
     if (this.state.running) {
       this.togglePause();
     }
 
-    let gameBoard = [];
+    let Board = [];
     for (let i = 0; i < size[1]; i ++) {
-      gameBoard.push([]);
+      Board.push([]);
       for (let j = 0; j < size[0]; j ++) {
-        gameBoard[i].push(this.getRandom(0, max));
+        Board[i].push(this.getRandom(0, max));
       }
     }
     this.setState({
-      gameBoard: gameBoard,
+      Board: Board,
       gen: 0,
       size: size
     });
