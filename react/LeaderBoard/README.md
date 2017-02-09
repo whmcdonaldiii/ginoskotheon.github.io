@@ -6,8 +6,7 @@ App that displays a leader board using React.js
 
 ##### I learned
 
- - How to connect to a third party API for stocks data.
- - How to create multiple types of logins.
+ - Fundamental Concepts of React.js
 
 ##### Skills used
  - React.js
