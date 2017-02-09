@@ -11,6 +11,7 @@ App that displays a rogue-like crawler game using React.js
 ##### Skills used
  - React.js
  - Github
+ - Humane.js
  - implementing Canvas with React.js
 
 ##### User Stories
@@ -30,4 +31,4 @@ App that displays a rogue-like crawler game using React.js
 
 #### Big thanks
 
- to [Yasser Hussain](http://codepen.io/yasserhussain1110/) for sharing his pen which had humane.js in the resources. 
+ to [Yasser Hussain](http://codepen.io/yasserhussain1110/) for sharing his pen which had humane.js in the resources.
