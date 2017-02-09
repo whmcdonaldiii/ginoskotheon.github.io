@@ -33,3 +33,15 @@ img {
   height: 40px;
   width: 40px;
 }
+
+#gitlink {
+  height: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+#gitlink a {
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+}

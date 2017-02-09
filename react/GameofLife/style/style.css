@@ -113,3 +113,14 @@ button {
   border: 2px solid #fbb;
   border-radius: 5px;
 }
+
+#gitlink {
+  height: 50px;
+  width: 100%;
+  background: red;
+}
+
+#gitlink a {
+  color: #fff;
+  cursor: pointer;
+}
