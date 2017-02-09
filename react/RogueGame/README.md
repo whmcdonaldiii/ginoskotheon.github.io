@@ -26,3 +26,8 @@ App that displays a rogue-like crawler game using React.js
  - User Story: I can delete these recipes.
 
  - User Story: All new recipes I add are saved in my browser's local storage. If I refresh the page, these recipes will still be there.
+
+
+#### Big thanks
+
+ to [Yasser Hussain](http://codepen.io/yasserhussain1110/) for sharing his pen which had humane.js in the resources. 
