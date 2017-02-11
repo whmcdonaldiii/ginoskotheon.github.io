@@ -1232,6 +1232,9 @@ section.articles {
         font-size: 35px; } }
     @media (max-width: 640px) {
       .home-footer .email a {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         font-size: 20px; } }
   .home-footer .inline {
     display: -webkit-box;
