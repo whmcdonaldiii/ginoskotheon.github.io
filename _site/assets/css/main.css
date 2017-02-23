@@ -1085,6 +1085,48 @@ section.design {
     margin-left: -100px;
     margin-top: -50px; } }
 
+section.node {
+  background-image: url(../img/node-bg.jpg);
+  background-color: steelblue;
+  background-position: center;
+  background-size: cover;
+  color: white; }
+  section.node .home-cta {
+    background: -webkit-gradient(linear, left bottom, right top, from(#3e863d), to(#b7d4ad));
+    background: -webkit-linear-gradient(bottom left, #3e863d, #b7d4ad);
+    background: linear-gradient(to top right, #3e863d, #b7d4ad);
+    color: #ddd;
+    margin-bottom: 5px; }
+    section.node .home-cta:hover {
+      color: red; }
+  section.node .col-1 {
+    position: relative;
+    height: 400px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    @media (max-width: 640px) {
+      section.node .col-1 {
+        height: auto;
+        display: block;
+        padding: 50px 20px; }
+        section.node .col-1:last-child {
+          padding: 0px 20px 50px; } }
+
 section.articles {
   background-image: url(../img/article-bg.jpg);
   background-repeat: repeat; }
