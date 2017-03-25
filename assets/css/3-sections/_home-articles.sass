@@ -1,94 +1,92 @@
 section.articles
   background:
-    image: url(../img/article-bg.jpg)
-    repeat: repeat
+    color: rgba(0,0,0,0)
 
-  .col-1
-    display: flex
-    align-items: center
 
-  .home-cta
-    color: white
-    background: #3d96cb
+  .box3
 
-  .article-wrap
-    margin: -50px 0
-    +clearfix
-
-  .article-thumb
-    display: block
+    padding: 0
+    margin-top: -50px
+    // border: 1px solid white
+    height: 500px
+    width: 100%
     background:
-      size: cover
-      position: center
-    width: 25%
-    float: left
-    position: relative
-    overflow: hidden
-    opacity: 0
-    transform: translateX(-20px)
-    transition: all 300ms ease-in-out
-
-
-    &.is-visible
-      opacity: 1
-      transform: translateX(0px)
-
-    &.is-emph
-      animation-name: tada
-      animation-duration: 1s
-      animation-fill-mode: both
-      z-index: 1
-
-    &::after
-      content: ''
-      display: block
-      padding-top: 100%
-
-  .article-meta
+      color: black
+    transition: opacity 300ms ease-in-out
     position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    background: fade-out(#3d96cb, 0.3)
     color: white
-    padding: 10px
-    transform: translate(0%, 100%) scale(0.5)
-    transition: all 200ms ease-in-out
+    display: flex
+    cursor: pointer
+    justify-content: center
+    align-items: center
+    font-size: 60px
+    opacity: 1
+    z-index: 1
+    &.isactive
+      opacity: 0
+      z-index: -1
+
+    @media (max-width: 640px)
+      margin-top: -166px
+
+  .cf
+
+    z-index: 0
+    position: relative
+
+  div.panel
+    margin-top: 50px
+    background: salmon
+    padding: 20px
+    border-radius: 5px
+    box-shadow: 0 0px 10px 2px rgba(0,0,0,0.6)
+
+  .opaque
+    opacity: 1
+  .faded
     opacity: 0
 
+  h2
+    color: white
+    font:
+      size: 60px
+      weight: 400
+    line-height: 1
+    margin-right: 0
+    margin-top: 100px
+    margin-bottom: 100px
+    position: relative
+    z-index: 0
+    @media (max-width: 640px)
+      margin-top: -50px
+      font-size: 40px
 
-    .name
-      font-size: 18px
 
-    .date
-      font-style: italic
+  #rt
+    margin-top: 30px
+    margin-left: 120px
+    width: 50px
+    // height: 50px
+    border: 2px solid black
 
-  .article-thumb:hover .article-meta
-    opacity: 1
-    transform: translate(0%, 0%) scale(1)
+  .home-cta.arrows
+    font-size: 40px
+    color: salmon
 
-  @media (max-width: 640px)
-    .desc-wrap
-      margin-top: 100px
-      width: 100%
+    @media (max-width: 640px)
+      font-size: 20px
+      margin-bottom: 0
 
-  @media (max-width: 999px)
-    .article-thumb
-      width: 33.3%
 
-@keyframes tada
-  0%
-    transform: scale3d(1, 1, 1)
+  .home-lead
+    padding-bottom: 0px
+    margin: 40px 0
+    color: salmon
 
-  10%, 20%
-    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg)
+    @media (max-width: 640px)
+      padding-bottom: 0
+      font-size: 20px
 
-  30%, 50%, 70%, 90%
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
-
-  40%, 60%, 80%
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
-
-  100%
-    transform: scale3d(1, 1, 1)
+      margin-left: auto
+      margin-right: auto
+      max-width: 500px

@@ -1,17 +1,10 @@
 section.articles#articles
+  //- .box3#myarticles Articles
   .flex.flex--center
-
-    .col-50
-      .article-wrap
-        |{% for post in site.posts limit: 12 %}
-        a(href="{{post.url}}" style="background-image: url(assets/img/article-thumbs/{{post.thumbnail}})").article-thumb
-          .article-meta
-            .name {{post.title}}
-            .date {{post.date | date: "%b %d, %Y"}}
-        |{% endfor %}
-
-    .col-50.flex.flex--center.order-first
-      .col-1
-        .desc-wrap
-          p.home-lead.outdented ...Putting insight into the world around...
-          a(href="/articles").home-cta See All Articles
+    .col-1
+      div.panel
+        h2 ...probing deep...
+    .col-1
+      p.home-lead ...into the great questions of life...
+      div#rt 
+        a(href="#myart").home-cta.arrows <i class="fa fa-arrow-down" aria-hidden="true"></i>

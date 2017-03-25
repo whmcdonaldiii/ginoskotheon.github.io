@@ -49,12 +49,9 @@ gulp.task('sass', function () {
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('_site/assets/css'))
-        .pipe(browserSync.reload({stream:true, match: '**/*.css'}))
+        .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('assets/css'));
-
 });
-
-
 
 /**
   * Will does Pug stuff
@@ -76,10 +73,12 @@ gulp.task('pug', function(){
 gulp.task('watch', function () {
 
     gulp.watch('assets/css/**', ['sass']);
-    gulp.watch('assets/js/**', ['jekyll-rebuild']);
-    gulp.watch(['index.html', '_includes/*.html','_layouts/*.html'], ['jekyll-rebuild']);
-    gulp.watch('assets/js/**', ['jekyll-rebuild']);
+    gulp.watch('assets/post-assets/css/**', ['sass']);
     gulp.watch('_pug/*.pug', ['pug']);
+    gulp.watch('assets/js/**', ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_includes/*.html','_layouts/*.html', 'articles/*.html'], ['jekyll-rebuild']);
+    gulp.watch('assets/js/**', ['jekyll-rebuild']);
+
 
 });
 

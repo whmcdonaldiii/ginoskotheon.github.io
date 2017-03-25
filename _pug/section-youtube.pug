@@ -1,9 +1,14 @@
 section.youtube#youtube
+  //- .box.box2#myyoutube YouTube
   .flex.flex--space-around
     .col-1
-      .video-strip
       .flex-video <iframe src="https://www.youtube.com/embed/a4aZPWzB2oE" frameborder="0" allowfullscreen></iframe>
 
     .col-1.order-first
-      p.home-lead.outdented ...pushing valuable content onto YouTube...
+      p.home-lead.outdented And he is sharing his findings with the world ...
       a(href="https://www.youtube.com/user/ginoskotheon3" target="_blank").home-cta Watch on YouTube
+      div.direction
+        div.arrow
+          a(href="#art").home-cta.arrows <i class="fa fa-arrow-down" aria-hidden="true"></i>
+        div.arrow
+          a(href="#webdev").home-cta.arrows <i class="fa fa-arrow-up" aria-hidden="true"></i>

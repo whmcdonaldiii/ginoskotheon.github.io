@@ -1,45 +1,169 @@
 section.about
 
-
-  background-image: url(../img/mecutout.png), url(../img/qingdao.jpg)
-  background-size: 720px 960px, cover
-  background-position: top left, 0
-  background-repeat: no-repeat, no-repeat
+  background:
+    color: rgba(0,0,0,0)
+    image: url(/assets/img/bg3.jpg)
+    position: 0px 55px
+    size: cover
+    repeat: no-repeat
 
 
   h2
-    color: #3f3f42
+    color: white
     font:
       size: 60px
       weight: 400
     line-height: 1
-    margin-left: -100px
-    margin-top: -10px
-    margin-bottom: 30px
+    width: 1500px
+    margin-right: 0
+    margin-top: 150px
+    margin-bottom: 300px
+    position: relative
+    z-index: 0
 
     @media (max-width: 640px)
+      width: 100%
+      display: block
+      font-size: 30px
       margin-left: auto
       margin-right: auto
-      max-width: 300px
+      text-align: center
+      margin-top: 200px
+      margin-bottom: 50px
 
-  .pBox
-    background: rgba(255, 255, 255, 0.5)
-    padding: 10px
-    border-radius: 5px
+
+  .home-cta
+    color: salmon
+    margin-bottom: 0px
+    cursor: pointer
+
+  .arrow
+    margin-top: 30px
+    // margin-left: 120px
     text-align: center
+    width: 50px
+    height: 90px
+    border: 2px solid black
 
+  .home-cta.arrows
+    margin-top: 0px
+    font-size: 40px
+    color: salmon
+    cursor: pointer
+
+    @media (max-width: 640px)
+      font-size: 20px
+      margin-bottom: 0
 
   .home-lead
-    color: #333
-    margin-top: 10px
-    margin-bottom: 0
-
-
-  .lead
-    padding-bottom: 170px
-
+    padding-bottom: 0px
+    margin: 340px 50px 50px 0
+    color: salmon
 
     @media (max-width: 640px)
+      display: block
+      padding: 0px 0px
+      margin-top: 150px
+      font-size: 20px
       margin-left: auto
       margin-right: auto
-      max-width: 300px
+      width: 100%
+
+
+.modal#myabout
+  display: none
+  position: fixed
+  z-index: 1
+  padding-top: 100px
+  padding-bottom: 100px
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  overflow: auto
+  background-color: rgba(9,9,9,0.8)
+
+.modalBack
+  background: rgb(236,243,243)
+  display: block
+  padding: 50px
+  width: 90%
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 100px
+  text-align: center
+
+
+
+  #caption
+    text-align: center
+    color: salmon
+    font-size: 24px
+    margin-left: auto
+    margin-right: auto
+    padding: 10px
+    width: 400px
+    @media(max-width: 640px)
+      width: 200px
+
+
+  hr
+    height: 1px
+    border: 0
+    border-top: 1px solid salmon
+    margin: 1em auto
+    padding: 0
+    width: 100px
+    color:
+
+  p
+   width: 1000px
+   font-size: 18px
+   text-align: justify
+   margin: 1em auto
+   @media (max-width: 640px)
+     width: 300px
+     font-size: 12px
+
+
+
+  img
+    border: 15px solid #3e2b14
+    padding: 10px
+    width: 30%
+    @media(max-width: 640px)
+      width: 70%
+
+
+    // margin-left: auto
+    // margin-right: auto
+
+.close
+  color: #fff
+  float: right
+  margin-right: 50px
+  margin-left: 0px
+  margin-top: -50px
+  position: static
+
+  font-size: 28px
+  font-weight: bold
+
+.close:hover,
+.close:focus
+  color: #ccc
+  text-decoration: none
+  cursor: pointer
+
+
+.clearfix
+  &::after
+    display: block
+    content: ""
+    clear: both
+
+
+
+.married
+  margin-right: 10px
+  @include clearfix

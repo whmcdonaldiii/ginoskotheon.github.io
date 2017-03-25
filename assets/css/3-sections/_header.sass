@@ -1,14 +1,19 @@
 .home-wrap
+
   header
-    width: 135px
-    background: white
+    width: 100%
+    // height: 50px
+    background: #ecf3f3
     padding: 30px 0
+    position: fixed
+    z-index: 1
     .header-position
-      position: fixed
+
       top: 30px
-      left: 0
+      left: 0px
       bottom: 30px
-      width: 135px
+      width: 100%
+      // height: 50px
       display: flex
       flex-direction: column
       justify-content: space-between
@@ -20,44 +25,41 @@
         color: #666
 
     .logo
-      +hide-text
       max-width: 135px
-      background:
-        image: url(/assets/img/logo-swg.svg)
-        repeat: no-repeat
-        position: center
-        size: contain
-        //color: white
       height: 80px
       padding: 0
-      margin: 0
+      margin: 0 10px
 
     // Desktop Nav
     .site-nav
       ul
         list-style: none
-        margin: 20px 0
-        padding: 0 20px 0 0
+        margin: -55px 0
+        margin-right: 250px
+        padding: 0
+        float: right
         text-align: right
-        margin-top: -500px
+        color: black
+        font-size: 20px
 
         li
           margin-bottom: 10px
+          display: inline
+          padding: 0 20px 0 5px
 
           &:last-child
             margin-bottom: 0
 
-    // .email-link
-    //   display: block
-    //   text-align: right
-    //   padding-right: 20px
+    .email-link
+      display: block
+      text-align: right
+      padding-right: 20px
 
     // Mobile Toggle
     .mobile-nav-toggle
       display: none
       width: 50px
       height: 50px
-      //background: pink
       margin-right: 20px
       align-items: center
       cursor: pointer
@@ -101,12 +103,14 @@
   // Mobile Nav
   .mobile-nav
     display: none
-    position: absolute
+    position: fixed
     width: 100%
-    background: white
-    padding: 30px 0 20px
+    background: #efefef
+    padding: 130px 0 20px
     transform: translate(-100%)
     transition: all 0.3s ease-in-out
+    z-index: 1
+
 
     a
       color: #999
@@ -121,10 +125,8 @@
 
     li
       text-align: center
+      display: block
       margin-bottom: 10px
-
-
-
 
 @media (max-width: 775px)
   .home-wrap
@@ -133,7 +135,7 @@
       padding: 20px 0
 
       .header-position
-        width: auto
+        width: 100%
         position: relative
         top: auto
         bottom: auto
