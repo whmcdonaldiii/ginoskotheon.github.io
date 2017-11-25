@@ -871,7 +871,8 @@ section.about {
   top: 0;
   width: 100%;
   background-color: rgba(9, 9, 9, 0.8); }
-  .modal#myabout ::-webkit-scrollbar {
+
+  ::-webkit-scrollbar {
     width: 0px;
     background: transparent; }
 
@@ -886,6 +887,7 @@ section.about {
   overflow: scroll;
   margin-bottom: 100px;
   text-align: center; }
+
   .modalBack #caption {
     text-align: center;
     color: salmon;
