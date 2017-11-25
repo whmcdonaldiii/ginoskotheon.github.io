@@ -9,19 +9,20 @@ section.about
 
 
   h2
-    color: white
+    color: #54504f
     font:
-      size: 60px
+      size: 80px
       weight: 400
     line-height: 1
     width: 1500px
-    margin-right: 0
-    margin-top: 150px
-    margin-bottom: 300px
+    margin-left: 400px
+    margin-top: 50px
+    margin-bottom: 100px
     position: relative
     z-index: 0
+    text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.8)
 
-    @media (max-width: 640px)
+    @media (max-width: 840px)
       width: 100%
       display: block
       font-size: 30px
@@ -30,34 +31,85 @@ section.about
       text-align: center
       margin-top: 200px
       margin-bottom: 50px
+  
+  .col-1.order-second
+    position: relative
+    margin-top: 250px
+    margin-left: 250px
+    height: 300px
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
 
+    @media (max-width: 840px)
+      display: block
+      font-size: 30px
+      margin-left: auto
+      margin-right: auto
+      text-align: center
+     
+
+  a.home-cta.arrows
+    border:none
+    text-decoration: none
+
+    @media (max-width: 640px)
+    height: auto
+    display: block
+    margin: auto 0
+    padding: 50px 20px
 
   .home-cta
     color: salmon
     margin-bottom: 0px
     cursor: pointer
-
-  .arrow
-    margin-top: 30px
-    // margin-left: 120px
-    text-align: center
-    width: 50px
-    height: 90px
-    border: 2px solid black
-
-  .home-cta.arrows
-    margin-top: 0px
-    font-size: 40px
-    color: salmon
-    cursor: pointer
+    border: none
 
     @media (max-width: 640px)
-      font-size: 20px
-      margin-bottom: 0
+    height: auto
+    display: block
+    padding: 50px 20px
+  
+  .home-cta.button
+    width: 300px
+
+   
+  
+  .direction
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: row
+    
+    @media (max-width: 640px)
+      display: block
+      margin: auto 0
+      margin-top: 50px
+
+    .arrow
+      margin-top: 30px
+      text-align: center
+      width: 50px
+      height: 90px
+      //border: 2px solid black
+
+    .home-cta.arrows
+      margin-top: 90px
+      font-size: 40px
+      color: salmon
+      cursor: pointer
+      border: none
+
+      @media (max-width: 640px)
+        font-size: 20px
+        margin-bottom: 0
 
   .home-lead
     padding-bottom: 0px
-    margin: 340px 50px 50px 0
+    margin: 340px 50px 20px 30px
+    text-align: center
     color: salmon
 
     @media (max-width: 640px)
@@ -65,6 +117,7 @@ section.about
       padding: 0px 0px
       margin-top: 150px
       font-size: 20px
+      text-align: center
       margin-left: auto
       margin-right: auto
       width: 100%

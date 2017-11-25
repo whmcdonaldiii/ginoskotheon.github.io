@@ -478,6 +478,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; }
+
 svg {
   height: 100%;
   width: 100%; }
@@ -511,6 +515,7 @@ section:nth-child(odd) {
   text-align: center;
   padding: 0.5em 0;
   line-height: 1.25;
+  border: none;
   -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out; }
   .home-cta:hover {
@@ -808,17 +813,18 @@ section.about {
   background-size: cover;
   background-repeat: no-repeat; }
   section.about h2 {
-    color: white;
-    font-size: 60px;
+    color: #54504f;
+    font-size: 80px;
     font-weight: 400;
     line-height: 1;
     width: 1500px;
-    margin-right: 0;
-    margin-top: 150px;
-    margin-bottom: 300px;
+    margin-left: 400px;
+    margin-top: 50px;
+    margin-bottom: 100px;
     position: relative;
-    z-index: 0; }
-    @media (max-width: 640px) {
+    z-index: 0;
+    text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.8); }
+    @media (max-width: 840px) {
       section.about h2 {
         width: 100%;
         display: block;
@@ -828,28 +834,94 @@ section.about {
         text-align: center;
         margin-top: 200px;
         margin-bottom: 50px; } }
-  section.about .home-cta {
-    color: salmon;
-    margin-bottom: 0px;
-    cursor: pointer; }
-  section.about .arrow {
-    margin-top: 30px;
-    text-align: center;
-    width: 50px;
-    height: 90px;
-    border: 2px solid black; }
-  section.about .home-cta.arrows {
-    margin-top: 0px;
-    font-size: 40px;
-    color: salmon;
-    cursor: pointer; }
+  section.about .col-1.order-second {
+    position: relative;
+    margin-top: 250px;
+    margin-left: 250px;
+    height: 300px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    @media (max-width: 840px) {
+      section.about .col-1.order-second {
+        display: block;
+        font-size: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center; } }
+    section.about .col-1.order-second a.home-cta.arrows {
+      text-decoration: none; }
+    section.about .col-1.order-second .home-cta {
+      color: salmon;
+      margin-bottom: 0px;
+      cursor: pointer;
+      border: none; }
+    section.about .col-1.order-second .home-cta.button {
+      width: 300px; }
     @media (max-width: 640px) {
-      section.about .home-cta.arrows {
-        font-size: 20px;
-        margin-bottom: 0; } }
+      section.about .col-1.order-second {
+        height: auto;
+        display: block;
+        padding: 50px 20px; }
+        section.about .col-1.order-second:last-child {
+          padding: 0px 20px 50px; } }
+  section.about .direction {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    @media (max-width: 640px) {
+      section.about .direction {
+        display: block;
+        margin: auto 0;
+        margin-top: 50px; } }
+    section.about .direction .arrow {
+      margin-top: 30px;
+      text-align: center;
+      width: 50px;
+      height: 90px; }
+    section.about .direction .home-cta.arrows {
+      margin-top: 90px;
+      font-size: 40px;
+      color: salmon;
+      cursor: pointer;
+      border: none; }
+      @media (max-width: 640px) {
+        section.about .direction .home-cta.arrows {
+          font-size: 20px;
+          margin-bottom: 0; } }
   section.about .home-lead {
     padding-bottom: 0px;
-    margin: 340px 50px 50px 0;
+    margin: 340px 50px 20px 30px;
+    text-align: center;
     color: salmon; }
     @media (max-width: 640px) {
       section.about .home-lead {
@@ -857,6 +929,7 @@ section.about {
         padding: 0px 0px;
         margin-top: 150px;
         font-size: 20px;
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
         width: 100%; } }
@@ -1029,13 +1102,15 @@ section.skills {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
-            flex-direction: row;
-    text-align: center;
-    color: salmon; }
+            flex-direction: row; }
     @media (max-width: 640px) {
       section.skills div.direction {
         margin-left: auto;
@@ -1043,13 +1118,14 @@ section.skills {
     section.skills div.direction .arrow {
       margin-top: 30px;
       width: 50px;
-      text-align: center;
-      border: 2px solid black; }
+      text-align: center; }
     section.skills div.direction .home-cta.arrows {
       background-color: #fff;
-      font-size: 40px; }
-    section.skills div.direction i {
+      font-size: 40px;
+      text-align: center;
       color: salmon; }
+      section.skills div.direction .home-cta.arrows i {
+        color: salmon; }
     @media (max-width: 640px) {
       section.skills div.direction {
         font-size: 20px; } }
@@ -1059,8 +1135,7 @@ section.youtube {
   section.youtube .arrow {
     margin-top: 30px;
     margin-left: 120px;
-    width: 50px;
-    border: 2px solid black; }
+    width: 50px; }
   section.youtube .home-cta {
     background-color: salmon;
     color: #fff; }
@@ -1087,6 +1162,8 @@ section.youtube {
   section.youtube .home-lead {
     padding-bottom: 0px;
     margin: 40px 0;
+    margin-left: 30px;
+    text-align: center;
     color: salmon; }
     @media (max-width: 640px) {
       section.youtube .home-lead {
@@ -1096,7 +1173,7 @@ section.youtube {
         margin-left: auto;
         margin-right: auto;
         max-width: 500px; } }
-  section.youtube .col-1 {
+  section.youtube .col-1.order-first {
     position: relative;
     height: 400px;
     margin-top: 100px;
@@ -1104,10 +1181,10 @@ section.youtube {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: stretch;
-    -webkit-align-items: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -1118,12 +1195,14 @@ section.youtube {
         -ms-flex-pack: center;
             justify-content: center; }
     @media (max-width: 640px) {
-      section.youtube .col-1 {
+      section.youtube .col-1.order-first {
         height: auto;
         display: block;
         padding: 50px 20px; }
-        section.youtube .col-1:last-child {
+        section.youtube .col-1.order-first:last-child {
           padding: 0px 20px 50px; } }
+  section.youtube .home-cta.button {
+    width: 300px; }
   section.youtube .direction {
     position: relative;
     display: -webkit-box;
@@ -1148,8 +1227,7 @@ section.youtube {
       margin-left: auto;
       margin-right: auto;
       width: 50px;
-      text-align: center;
-      border: 2px solid blac; }
+      text-align: center; }
     section.youtube .direction .home-cta.arrows {
       background-color: #fff;
       font-size: 40px;
@@ -1168,10 +1246,10 @@ section.webdev {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: stretch;
-    -webkit-align-items: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -1188,6 +1266,8 @@ section.webdev {
         padding: 50px 20px; }
         section.webdev .col-1:last-child {
           padding: 0px 20px 50px; } }
+  section.webdev .home-cta.button {
+    width: 300px; }
   section.webdev .modal#webproj {
     display: none;
     position: fixed;
@@ -1241,6 +1321,8 @@ section.webdev {
   section.webdev .home-lead {
     padding-bottom: 0px;
     margin: 40px 0;
+    margin-left: 30px;
+    text-align: center;
     color: salmon; }
     @media (max-width: 640px) {
       section.webdev .home-lead {
@@ -1290,8 +1372,7 @@ section.webdev {
       margin-top: 30px;
       text-align: center;
       width: 50px;
-      height: 63px;
-      border: 2px solid black; }
+      height: 63px; }
     section.webdev div.direction .home-cta.arrows {
       background-color: #fff;
       font-size: 40px;
@@ -1392,22 +1473,24 @@ div.direction {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
-          flex-direction: row; }
+          flex-direction: row;
+  width: 120px; }
   @media (max-width: 640px) {
     div.direction {
       margin-left: 0;
       margin-top: 50px; } }
   div.direction .arrow {
     margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
     width: 50px;
-    text-align: center;
-    border: 2px solid black; }
+    text-align: center; }
   div.direction .home-cta.arrows {
     background-color: #fff;
     font-size: 40px;
@@ -1528,8 +1611,7 @@ div.direction {
     margin-left: auto;
     margin-right: auto;
     width: 50px;
-    text-align: center;
-    border: 2px solid black; }
+    text-align: center; }
   div.direction .home-cta.arrows {
     background-color: #fff;
     font-size: 40px;
