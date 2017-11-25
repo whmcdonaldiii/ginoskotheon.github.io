@@ -1237,9 +1237,10 @@ section.webdev {
         text-align: center; }
       section.webdev .modalBack a .description {
         text-align: center; }
-  section.webdev ::-webkit-scrollbar {
+    ::-webkit-scrollbar {
     width: 0px;
     background: transparent; }
+    
   section.webdev .home-lead {
     padding-bottom: 0px;
     margin: 40px 0;
