@@ -685,7 +685,8 @@ section.about {
   height: 800px;
   background-color: transparent;
   background-image: url(/assets/img/me_new.png);
-  background-position: 0px 55px;
+  background-position: -webkit-calc(50px + 100%) 55px;
+  background-position: calc(50px + 100%) 55px;
   background-size: cover;
   background-repeat: no-repeat; }
 
