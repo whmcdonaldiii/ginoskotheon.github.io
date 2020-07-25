@@ -1,16 +1,157 @@
----
-layout: default
-title: William H McDonald III dot com
----
-<div class="home-wrap">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/icon_swg.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>William H. McDonald III</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="hero" id="hero">
+        <div class="sectionContent gridSections">
+          <div class="blurb" id="heroBlurb">
+            <div class="titleBox">
+              <h1>William McDonald</h1>
+              <hr />
+            </div>
+            <h3>Software Engineer</h3>
+            <div class="buttonBox">
+              <a class="button" href="#contact">Contact</a>
+            </div>
+          </div>
+          <div class="image" id="heroImage">
+            <div class="imageRec"></div>
+            <div class="imageBox">
+              <img src="img/mecutout.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="sectionContent gridSections">
+          <div class="blurb" id="aboutBlurb">
+            <div class="circleAbout"></div>
+            <div class="titleBox">
+              <h1>About Me</h1>
+              <hr />
+            </div>
+          </div>
+          <div class="content" id="aboutContent">
+            <p>
+              <span class="larger">I</span> spent 15 years as a band director. I
+              am now a software developer. I started out software development
+              learning Python. However, my present work is building native and
+              web apps in C#.
+            </p>
+            <br />
+            <p>
+              我在中国住了11 年了。 我心依然是中国心。
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="skills">
+        <div class="sectionContent skillSectionContent">
+          <div class="titleBox">
+            <h1>Skills</h1>
+            <hr />
+            <br />
+            <p>
+              <span class="larger">E</span> xpertise in DotNet with professional
+              experience building production level DotNet applications.
+            </p>
+            <p>
+              Production level code using the most common DotNet project types
+              including MVC5, Winforms, and WPF.
+            </p>
+            <p>
+              Frontend projects are not a specialty. Writing beautiful,
+              decoupled backend code is.
+            </p>
+          </div>
 
-    {% include header.html %}
-
-    <div class="home-sections">
-
-        {% include section-about.html %}
-        {% include section-skills.html %}
-        {% include section-contact.html %}
-
+          <div class="skillBox">
+            <div class="box" id="csharp">
+              <div class="front">
+                <!-- <div class="boxOverlay" id="csharpO"></div> -->
+                <img src="img/c-sharp-logo.png" />
+              </div>
+              <div class="back">
+                I write C# for my job. It's awesome.
+              </div>
+            </div>
+            <div class="box" id="sqlserver">
+              <div class="front">
+                <!-- <div class="boxOverlay" id="sqlO"></div> -->
+                <img src="img/sqlserver.png" />
+              </div>
+              <div class="back">
+                I believe in a data-driven approach to software development. SQL
+                is obviously a critical aspect of that approach.
+              </div>
+            </div>
+            <div class="box" id="python">
+              <div class="front">
+                <!-- <div class="boxOverlay" id="pythonO"></div> -->
+                <img src="img/python.png" />
+              </div>
+              <div class="back">
+                Python is my first language. I use it on the job to automate
+                tasks such as sending emails. I use it in my free time to
+                augment Blender 3D.
+              </div>
+            </div>
+            <div class="box" id="javascript">
+              <div class="front">
+                <!-- <div class="boxOverlay" id="jsO"></div> -->
+                <img src="img/javascript.png" />
+              </div>
+              <div class="back">
+                While I appreciate the effort of Web Assembly to replace
+                JavaScript, it hasn't happened yet. JS is still the language of
+                the web and no complex website can be built without it.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="sectionContent contentSectionContent">
+          <div class="titleBox">
+            <h1>Contact</h1>
+            <hr />
+          </div>
+          <div class="contactBox">
+            <div class="email">
+              <span
+                ><i class="fas fa-envelope"> </i>
+                williamhmcdonaldiii@gmail.com</span
+              >
+            </div>
+            <div class="social">
+              <span
+                ><a
+                  href="https://www.linkedin.com/in/will-mcdonald-2904632b/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin"></i></a
+              ></span>
+              <span
+                ><a href="https://github.com/ginoskotheon" target="_blank"
+                  ><i class="fab fa-github"></i></a
+              ></span>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <a class="toTop" href="#hero">&uarr; Back to the top</a>
+        </div>
+      </section>
     </div>
-</div>
+  </body>
+</html>
