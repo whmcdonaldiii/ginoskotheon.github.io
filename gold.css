@@ -1,10 +1,10 @@
 :root {
-  --main-font-color: #222;
+  --main-font-color: #fff;
 
-  --bg-color: #eee;
+  --bg-color: #ffb633;
   --secondary-bg-color: #999;
   --card-bg-color: #3a4c43;
-  --primary-color: #ffb633;
+  --primary-color: #2b2d2c;
   --button-top-left-color: #38ddfd;
   --button-bot-left-color: #2fce8b;
   --button-top-right-color: #27d238;

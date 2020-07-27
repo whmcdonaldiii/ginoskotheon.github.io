@@ -26,7 +26,7 @@ body {
 
 .themebox {
   display: flex;
-  width: 150px;
+  width: 200px;
   justify-content: space-evenly;
   position: absolute;
   top: 10px;
@@ -38,7 +38,8 @@ body {
 }
 
 #lightTheme,
-#darkTheme {
+#darkTheme,
+#goldTheme {
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -46,7 +47,8 @@ body {
 }
 
 .lightThemeToolTip,
-.darkThemeToolTip {
+.darkThemeToolTip,
+.goldThemeToolTip {
   visibility: hidden;
 }
 
@@ -54,7 +56,8 @@ body {
   top: 60px;
   left: 5px;
 }
-.darkThemeToolTip {
+.darkThemeToolTip,
+.goldThemeToolTip {
   top: 60px;
   left: 5px;
 }
@@ -66,14 +69,22 @@ body {
   visibility: visible;
 }
 
+#goldTheme:hover .goldThemeToolTip {
+  visibility: visible;
+}
+
 #lightTheme {
   background-color: #fff;
   border: 1px solid var(--secondary-bg-color);
 }
 
 #darkTheme {
-  background-color: var(--secondary-bg-color);
+  background-color: #2b2d2c;
   border: 1px solid #fff;
+}
+#goldTheme {
+  background-color: #ffb633;
+  border: 1px solid #222;
 }
 
 section {

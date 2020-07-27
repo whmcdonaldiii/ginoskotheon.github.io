@@ -23,6 +23,9 @@ function setTheme(mode) {
   if (mode == 'light') {
     document.getElementById('theme-style').href = 'light.css';
   }
+  if (mode == 'gold') {
+    document.getElementById('theme-style').href = 'gold.css';
+  }
 
   localStorage.setItem('theme', mode);
 }
