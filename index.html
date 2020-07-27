@@ -9,10 +9,20 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+
+    <link id="theme-style" rel="stylesheet" href="light.css" />
     <title>William H. McDonald III</title>
   </head>
   <body>
     <div class="container">
+      <div class="themebox">
+        <div data-mode="light" class="theme" id="lightTheme">
+          <div class="toolTip lightThemeToolTip">Light Theme</div>
+        </div>
+        <div data-mode="dark" class="theme" id="darkTheme">
+          <div class="toolTip darkThemeToolTip">Dark Theme</div>
+        </div>
+      </div>
       <section class="hero" id="hero">
         <div class="sectionContent gridSections">
           <div class="blurb" id="heroBlurb">
@@ -153,5 +163,6 @@
         </div>
       </section>
     </div>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

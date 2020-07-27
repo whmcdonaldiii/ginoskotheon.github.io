@@ -1,4 +1,5 @@
 :root {
+  --main-font-color: #fff;
   --bg-color: #2b2d2c;
   --secondary-bg-color: #303231;
   --card-bg-color: #3a4c43;
@@ -19,8 +20,60 @@
 html,
 body {
   background-color: var(--bg-color);
-  color: #fff;
+  color: var(--main-font-color);
   font-family: 'Open Sans', sans-serif;
+}
+
+.themebox {
+  display: flex;
+  width: 150px;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.toolTip {
+  position: absolute;
+}
+
+#lightTheme,
+#darkTheme {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.lightThemeToolTip,
+.darkThemeToolTip {
+  visibility: hidden;
+}
+
+.lightThemeToolTip {
+  top: 60px;
+  left: 5px;
+}
+.darkThemeToolTip {
+  top: 60px;
+  left: 5px;
+}
+
+#lightTheme:hover .lightThemeToolTip {
+  visibility: visible;
+}
+#darkTheme:hover .darkThemeToolTip {
+  visibility: visible;
+}
+
+#lightTheme {
+  background-color: #fff;
+  border: 1px solid var(--secondary-bg-color);
+}
+
+#darkTheme {
+  background-color: var(--secondary-bg-color);
+  border: 1px solid #fff;
 }
 
 section {
@@ -51,13 +104,13 @@ section {
   padding: 15px;
   text-decoration: none;
   cursor: pointer;
-  color: var(--secondary-bg-color);
+  color: var(--bg-color);
 }
 
 .button:hover {
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
-  background: var(--secondary-bg-color);
+  background: var(--bg-color);
 }
 .footer {
   position: absolute;
@@ -295,5 +348,12 @@ i {
   .imageRec {
     right: 1em;
     bottom: 2em;
+  }
+
+  #lightTheme:hover .lightThemeToolTip {
+    visibility: hidden;
+  }
+  #darkTheme:hover .darkThemeToolTip {
+    visibility: hidden;
   }
 }

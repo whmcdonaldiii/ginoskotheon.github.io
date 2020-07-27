@@ -1,0 +1,12 @@
+:root {
+  --main-font-color: #222;
+
+  --bg-color: #fefefe;
+  --secondary-bg-color: #999;
+  --card-bg-color: #3a4c43;
+  --primary-color: #ffb633;
+  --button-top-left-color: #38ddfd;
+  --button-bot-left-color: #2fce8b;
+  --button-top-right-color: #27d238;
+  --button-bot-right-color: #ae00ff;
+}
