@@ -9,4 +9,22 @@
   --button-bot-left-color: #2fce8b;
   --button-top-right-color: #27d238;
   --button-bot-right-color: #ae00ff;
+
+  --themeText: #2b2b2c;
+  --themeBorderActive: #2b2b2c;
+  --themeOther: #eee;
+}
+
+#lightTheme {
+  background-color: #eee;
+  border: 1px solid var(--themeBorderActive);
+}
+
+#darkTheme {
+  background-color: #2b2d2c;
+  border: 1px solid var(--themeOther);
+}
+#goldTheme {
+  background-color: #ffb633;
+  border: 1px solid var(--themeOther);
 }
