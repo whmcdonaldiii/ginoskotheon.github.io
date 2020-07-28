@@ -9,6 +9,7 @@
   --button-top-right-color: #27d238;
   --button-bot-right-color: #ae00ff;
   --button-box-shadow: 238, 238, 238, 0.5;
+
   --themeText: #ffb633;
   --themeBorderActive: #ffb633;
   --themeOther: #2b2b2c;
@@ -35,11 +36,6 @@ body {
   position: absolute;
   top: 10px;
   left: 10px;
-  color: var(--themeText);
-}
-
-.toolTip {
-  position: absolute;
 }
 
 #lightTheme,
@@ -49,24 +45,18 @@ body {
   width: 50px;
   border-radius: 50%;
   position: relative;
-  overflow: hidden;
   cursor: pointer;
+  z-index: 1;
 }
 
 .lightThemeToolTip,
 .darkThemeToolTip,
 .goldThemeToolTip {
+  top: 60px;
+  left: 5px;
+  color: var(--themeText);
+  position: absolute;
   visibility: hidden;
-}
-
-.lightThemeToolTip {
-  top: 60px;
-  left: 5px;
-}
-.darkThemeToolTip,
-.goldThemeToolTip {
-  top: 60px;
-  left: 5px;
 }
 
 #lightTheme:hover .lightThemeToolTip {
@@ -113,7 +103,7 @@ section {
   margin-top: 15px;
 } */
 
-#button {
+.button {
   position: relative;
 
   border: none;
@@ -130,14 +120,15 @@ section {
   z-index: 1;
 }
 
-.button:hover {
+/* .button:hover {
   border: 1px solid var(--primary-color);
   overflow: hidden;
 
   color: var(--primary-color);
   background: var(--bg-color);
   box-shadow: 0px 2px 4px 1px rgba(var(--button-box-shadow));
-}
+} */
+
 .footer {
   position: absolute;
   right: 5px;
@@ -350,7 +341,6 @@ i {
 .ripple {
   position: absolute;
   background: #fff;
-
   transform: translate(-50%, -50%);
   pointer-events: none;
   border-radius: 50%;
