@@ -373,4 +373,6 @@ i {
   #darkTheme:hover .darkThemeToolTip {
     visibility: hidden;
   }
+  #goldTheme:hover .goldThemeToolTip {
+    visibility: hidden;
 }
