@@ -229,8 +229,15 @@ section {
   border-radius: 50%;
   left: 0.5rem;
   opacity: 0.5;
-  z-index: 0;
+  z-index: 1;
+  cursor: pointer;
 }
+
+.bounce {
+  animation: bounce 2s 1;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+
 .skillBox {
   display: grid;
   grid-template-columns: repeat(2, 240px);
@@ -252,6 +259,15 @@ section {
   cursor: pointer;
   transition: transform 1s;
   transform-style: preserve-3d;
+}
+
+.box a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.box a:hover {
+  text-decoration: underline;
 }
 
 .contact {
@@ -293,19 +309,33 @@ section {
   height: 100px;
 }
 
-.contactBox span {
-  font-size: 32px;
-}
 .email {
   text-align: center;
+  font-size: 24px;
 }
 .social {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
 }
 
-.social span a {
+.socialWrap {
+  width: 50px;
+}
+
+.social a {
   color: #fff;
+  font-size: 32px;
+  vertical-align: middle;
+  transition: font-size 300ms ease-in-out;
+  transform-origin: center;
+}
+
+.social a:hover {
+  font-size: 42px;
 }
 
 i {
@@ -357,6 +387,30 @@ i {
     width: 500px;
     height: 500px;
     opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-100px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
   }
 }
 

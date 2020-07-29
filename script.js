@@ -2,7 +2,7 @@ let theme = localStorage.getItem('theme');
 const cards = document.querySelectorAll('.box');
 const button = document.querySelector('.button');
 
-const themeButs = document.querySelectorAll('.theme');
+const aboutCircle = document.querySelector('.circleAbout');
 
 if (theme == null) {
   setTheme('dark');
@@ -48,4 +48,11 @@ button.addEventListener('mouseover', function (e) {
   setTimeout(() => {
     ripples.remove();
   }, 500);
+});
+
+aboutCircle.addEventListener('mouseover', function () {
+  this.classList.add('bounce');
+  setTimeout(() => {
+    this.classList.remove('bounce');
+  }, 2000);
 });
