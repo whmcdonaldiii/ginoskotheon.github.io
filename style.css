@@ -366,6 +366,7 @@ i {
   color: white;
   transform: rotateY(180deg);
   padding: 15px;
+  background: #666;
 }
 
 .ripple {
