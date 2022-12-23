@@ -1,5 +1,5 @@
 :root {
-  --main-font-color: #fefefe;
+  --main-font-color: #ddd;
   --bg-color: #2b2d2c;
   --secondary-bg-color: #303231;
   --card-bg-color: #3a4c43;
@@ -70,7 +70,7 @@ body {
 }
 
 #lightTheme {
-  background-color: #fefefe;
+  background-color: #ddd;
   border: 1px solid var(--themeOther);
 }
 
@@ -137,6 +137,36 @@ section {
   font-size: 48px;
 }
 
+#nameHrTrig, #aboutHrTrig, #skillHrTrig, #contactHrTrig{
+  height: 10px;
+  cursor: pointer;
+}
+
+#nameHr, #aboutHr, #skillHr, #contactHr{
+  transition: ease-in-out 0.3s;
+
+}
+
+#skillHr{
+  width:25px;
+}
+
+#nameHrTrig:hover #nameHr{
+  width:400px;
+}
+
+#aboutHrTrig:hover #aboutHr{
+  width:220px;
+}
+
+#skillHrTrig:hover #skillHr{
+  width:60px;
+}
+
+#contactHrTrig:hover #contactHr{
+  width: 90px;
+}
+
 #heroBlurb h3 {
   color: var(--primary-color);
 }
@@ -146,7 +176,7 @@ section {
 }
 #heroImage {
   position: relative;
-  border-left: 2px dotted var(--primary-color);
+  border-left: 2px solid var(--primary-color);
 }
 
 .imageBox {
@@ -233,6 +263,7 @@ section {
   grid-template-rows: repeat(2, 240px);
   grid-gap: 0.5em;
   justify-content: center;
+  perspective: 1000px;
 }
 
 .box {
@@ -321,6 +352,12 @@ section {
 
 .social a:hover {
   font-size: 42px;
+}
+
+
+#substackEmbed{
+  display: flex;
+  justify-content: center;
 }
 
 i {

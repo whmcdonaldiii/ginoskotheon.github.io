@@ -1,6 +1,7 @@
 let theme = localStorage.getItem('theme');
 const cards = document.querySelectorAll('.box');
 const button = document.querySelector('.button');
+let btnWrap = document.querySelector('#custom-substack-embed');
 
 const aboutCircle = document.querySelector('.circleAbout');
 
@@ -37,10 +38,10 @@ function setTheme(mode) {
   localStorage.setItem('theme', mode);
 }
 
+
 button.addEventListener('mouseover', function (e) {
   let x = e.clientX - e.target.offsetLeft;
   let y = e.clientY - e.target.offsetTop;
-
   let ripples = document.createElement('span');
   ripples.className = 'ripple';
 
@@ -52,6 +53,7 @@ button.addEventListener('mouseover', function (e) {
     ripples.remove();
   }, 500);
 });
+
 
 aboutCircle.addEventListener('mouseover', function () {
   this.classList.add('bounce');

@@ -1,7 +1,7 @@
 :root {
   --main-font-color: #222;
 
-  --bg-color: #fefefe;
+  --bg-color: #ddd;
   --secondary-bg-color: #999;
   --card-bg-color: #3a4c43;
   --primary-color: #ffb633;
@@ -12,11 +12,11 @@
   --button-box-shadow: 43, 45, 44, 0.5;
   --themeText: #2b2b2c;
   --themeBorderActive: #2b2b2c;
-  --themeOther: #eee;
+  --themeOther: #ddd;
 }
 
 #lightTheme {
-  background-color: #fefefe;
+  background-color: #ddd;
   border: 1px solid var(--themeBorderActive);
 }
 

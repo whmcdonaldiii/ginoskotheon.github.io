@@ -1,5 +1,5 @@
 :root {
-  --main-font-color: #fff;
+  --main-font-color: #fefefe;
 
   --bg-color: #ffb633;
   --secondary-bg-color: #999;
@@ -16,7 +16,7 @@
 }
 
 #lightTheme {
-  background-color: #eee;
+  background-color: #ddd;
   border: 1px solid var(--themeOther);
 }
 
