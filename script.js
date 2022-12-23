@@ -21,16 +21,19 @@ for (var i = 0; themeDots.length > i; i++) {
 }
 
 function setTheme(mode) {
-  if (mode == 'dark') {
-    document.getElementById('theme-style').href = 'style.css';
+  switch(mode){
+    case 'dark': 
+      document.getElementById('theme-style').href = 'style.css';
+      break;
+    case 'light': 
+      document.getElementById('theme-style').href = 'light.css';
+      break;
+    case 'gold': 
+      document.getElementById('theme-style').href = 'gold.css';
+      break;
+    default: 
+      document.getElementById('theme-style').href = 'style.css';
   }
-  if (mode == 'light') {
-    document.getElementById('theme-style').href = 'light.css';
-  }
-  if (mode == 'gold') {
-    document.getElementById('theme-style').href = 'gold.css';
-  }
-
   localStorage.setItem('theme', mode);
 }
 

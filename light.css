@@ -1,7 +1,7 @@
 :root {
   --main-font-color: #222;
 
-  --bg-color: #eee;
+  --bg-color: #fefefe;
   --secondary-bg-color: #999;
   --card-bg-color: #3a4c43;
   --primary-color: #ffb633;
@@ -16,7 +16,7 @@
 }
 
 #lightTheme {
-  background-color: #eee;
+  background-color: #fefefe;
   border: 1px solid var(--themeBorderActive);
 }
 
