@@ -267,8 +267,8 @@ section {
 
 .skillBox {
   display: grid;
-  grid-template-columns: repeat(2, 240px);
-  grid-template-rows: repeat(2, 240px);
+  grid-template-columns: repeat(4, 340px);
+  grid-template-rows: repeat(1, 240px);
   grid-gap: 0.5em;
   justify-content: center;
   perspective: 1000px;
@@ -364,6 +364,7 @@ section {
 
 
 #substackEmbed{
+  margin-top:20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -377,12 +378,23 @@ i {
   color: var(--primary-color);
 }
 
-.box:hover {
+/* .box:hover {
   transform: rotateY(180deg);
   transition: transform 0.5s;
-}
+} */
 
-.front,
+.front
+{
+  position:absolute;
+  z-index: 1;
+  width:25%;
+  height: 25%;
+}
+.front img{
+  position: relative;
+  width:100%;
+  object-fit: cover;
+}
 .back {
   position: absolute;
   height: 100%;
@@ -399,7 +411,7 @@ i {
   display: flex;
   align-items: center;
   color: white;
-  transform: rotateY(180deg);
+  /* transform: rotateY(180deg); */
   padding: 15px;
   background: #666;
 }
@@ -459,6 +471,16 @@ button{
   }
 }
 
+
+@media (max-width: 1390px){
+  .skillBox {
+    grid-template-columns: repeat(2, 340px);
+    grid-template-rows: repeat(2, 240px);
+  }
+}
+
+
+
 @media (max-width: 700px) {
   .blurb h1 {
     font-size: 20px;
@@ -469,7 +491,8 @@ button{
   }
   .skillBox {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 240px);
+    grid-template-rows: repeat(4, 340px);
+    min-width:340px;
   }
 
   .sectionContent {
@@ -487,6 +510,9 @@ button{
     right: 1em;
     bottom: 2em;
   }
+
+
+
 
   #lightTheme:hover .lightThemeToolTip {
     visibility: hidden;
