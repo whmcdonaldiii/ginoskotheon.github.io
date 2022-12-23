@@ -405,6 +405,15 @@ i {
   animation: animateRipple 1s linear infinite;
 }
 
+button{
+  transition: ease-in-out .1s
+}
+
+.csw-substack-gradient-custom button:hover{
+  color: #ffb633 !important;
+  background-color: #2b2d2c !important;
+}
+
 @keyframes animateRipple {
   0% {
     width: 0px;
