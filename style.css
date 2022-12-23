@@ -323,7 +323,7 @@ section {
 }
 
 #javascript{
-  background-color: var(--secondary-bg-color);
+  background-color: #666;
 }
 
 .contactBox {
@@ -378,11 +378,6 @@ i {
   color: var(--primary-color);
 }
 
-/* .box:hover {
-  transform: rotateY(180deg);
-  transition: transform 0.5s;
-} */
-
 .front
 {
   position:absolute;
@@ -411,9 +406,8 @@ i {
   display: flex;
   align-items: center;
   color: white;
-  /* transform: rotateY(180deg); */
   padding: 15px;
-  background: #666;
+  /* background: #666; */
 }
 
 .ripple {
