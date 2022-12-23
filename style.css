@@ -358,6 +358,11 @@ section {
 #substackEmbed{
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+#substackEmbed h3{
+  margin-right: 10px;
 }
 
 i {
