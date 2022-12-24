@@ -174,14 +174,36 @@ section {
 .contact {
   background-color: var(--secondary-bg-color);
 }
+
 #heroImage {
   position: relative;
   border-left: 2px solid var(--primary-color);
 }
 
 .imageBox {
+  width:100%;
   position: relative;
-  z-index: 1;
+  z-index: 1; 
+  background-size:contain;
+  transform-origin: center;
+  transition: ease-in 1s;
+  transform: scale3d(0.5, 0.5, 0.5);
+  opacity: 0;
+  
+}
+
+.growHeroImg{
+  /* width:100%; */
+  transform: scale3d(1, 1, 1);
+  opacity: 1;
+}
+
+.meImage{
+  width: 100%;
+  margin: auto auto;
+  display: block;
+  
+
 }
 
 .hero {
@@ -189,11 +211,7 @@ section {
   padding-bottom: 0;
 }
 
-.hero img {
-  width: 100%;
-  margin: auto auto;
-  display: block;
-}
+
 
 .imageRec {
   position: absolute;

@@ -38,6 +38,12 @@ function setTheme(mode) {
   localStorage.setItem('theme', mode);
 }
 
+function GrowHero()
+{
+  heroBox = document.querySelector('.imageBox');
+  heroBox.classList.add('growHeroImg');
+}
+
 
 button.addEventListener('mouseover', function (e) {
   let x = e.clientX - e.target.offsetLeft;
