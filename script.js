@@ -5,6 +5,15 @@ let btnWrap = document.querySelector('#custom-substack-embed');
 
 const aboutCircle = document.querySelector('.circleAbout');
 
+
+const skillContent = document.querySelector('.skillSectionContent');
+window.addEventListener('scroll', function(e) {
+  var scroll = window.pageYOffset || document.documentElement.scrollTop ||
+                document.body.scrollTop || 0;
+                skillContent.style.opacity = 1 - Math.max(0, Math.min(1, -scroll / 200 + 2));
+});
+
+
 if (theme == null) {
   setTheme('dark');
 } else {

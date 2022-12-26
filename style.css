@@ -211,7 +211,9 @@ section {
   padding-bottom: 0;
 }
 
-
+.info{
+  font-size: x-large;
+}
 
 .imageRec {
   position: absolute;
@@ -220,6 +222,11 @@ section {
   right: 4em;
   bottom: 7em;
   background-color: var(--primary-color);
+}
+
+.skillSectionContent{
+  opacity: 0;
+  transition: ease-in-out .3s;
 }
 
 .skillSectionContent h1,
@@ -497,6 +504,7 @@ button{
     font-size: 20px;
   }
 
+
   .circleAbout {
     left: -1rem;
   }
@@ -506,6 +514,9 @@ button{
     min-width:340px;
   }
 
+  .gridSections{
+    grid-template-columns: 1fr;
+  }
   .sectionContent {
     width: 90%;
   }
